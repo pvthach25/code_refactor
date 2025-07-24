@@ -106,11 +106,6 @@ public class PersonalTaskManagerViolations {
         String timestamp = getCurrentTimestamp();
         newTask.put("created_at", timestamp);
         newTask.put("last_updated_at", timestamp);
-        newTask.put("is_recurring", isRecurring); // YAGNI: Thêm thuộc tính này dù chưa có chức năng xử lý nhiệm vụ lặp lại
-        if (isRecurring) {
-
-            newTask.put("recurrence_pattern", "Chưa xác định");
-        }
 
         tasks.add(newTask);
 
